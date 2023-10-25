@@ -1,0 +1,33 @@
+<ng-template #divLoading>
+    <p>Loading...</p>
+</ng-template>
+
+<div *ngIf="hero; else divLoading" class="grid">
+  <div class="col-6 sm:col-6">
+    <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>{{ hero.superhero }}</mat-card-title>
+          <mat-card-subtitle>{{ hero.alter_ego }}</mat-card-subtitle>
+        </mat-card-header>
+        <div class="grid">
+            <img mat-card-image class="col:12 sm:col-6" [src]="hero | heroimage" alt="hero.id" id="card-img">
+        </div>
+      </mat-card>
+    </div>
+
+    <div class="col-6">
+      <mat-card>
+        <mat-card-content>
+          <p>
+            {{hero.first_appearance}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>EDIT</button>
+          <button mat-button>SHARE</button>
+          <button mat-button [routerLink]="'heroes/list'">GO BACK</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+</div>
