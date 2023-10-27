@@ -16,7 +16,7 @@ const routes: Routes = [
         children:[
         {
             path:'new-hero',
-            component:HeroPageComponent
+            component:NewPageComponent
         },
         {
             path:'search',
