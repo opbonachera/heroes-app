@@ -6,8 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-list-page',
   templateUrl: './list-page.component.html',
-  styles: [
-  ]
+  styleUrls: ['list-page.css']
 })
 export class ListPageComponent implements OnInit{
   constructor(

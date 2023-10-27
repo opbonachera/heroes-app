@@ -10,6 +10,7 @@ import { MaterialModule } from '../material/material.module';
 import { HeroCardComponent } from './components/card/hero.card/hero.card.component';
 import { HeroimagePipe } from './pipes/heroimage.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 HeroCardComponent
 
 
@@ -22,7 +23,8 @@ HeroCardComponent
     NewPageComponent,
     SearchPageComponent,
     HeroCardComponent,
-    HeroimagePipe
+    HeroimagePipe,
+    ConfirmDialogComponent
   ],
   imports: [
     CommonModule,
