@@ -1,7 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { switchMap } from 'rxjs';
+import { switchMap, tap,filter } from 'rxjs';
 
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog, MatDialogRef, MatDialogModule } from '@angular/material/dialog';
@@ -89,10 +89,10 @@ export class NewPageComponent implements OnInit{
       data: this.heroForm.value
     })
 
-    dialogRef.afterClosed().subscribe(result=>{
-      console.log("The dialog was closed")
-      console.log({result})
-    }
+    dialogRef.afterClosed().pipe(
+      filter((result:boolean)=>result),
+      tap(result=>console.log(result))
     )
+  
   }
 }
