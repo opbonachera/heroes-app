@@ -4,6 +4,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { Router } from "express";
 import { LayoutPageComponent } from "./pages/layout-page/layout-page.component";
 import { LoginPageComponent } from "./pages/login-page/login-page.component";
+import { PublicGuard } from "./guards/public.guard";
 
 const routes: Routes = [
     {
@@ -12,7 +13,7 @@ const routes: Routes = [
         children:[
             {
                 path:'login',
-                component:LoginPageComponent
+                component:LoginPageComponent,
             },
             {
                 path:'register',
